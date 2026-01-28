@@ -1,0 +1,18 @@
+homography_secondary_to_master:
+- - 2.2287951198584652
+  - 0.03761812706887387
+  - -229.7829755598359
+- - -0.061557068369940515
+  - 2.273805546706643
+  - -598.1090086414788
+- - -3.145361943727442e-05
+  - -0.00018119134695953742
+  - 1.0
+master_camera: IMX519
+secondary_camera: IMX500
+target_shape:
+- 640
+- 640
+temp_images:
+  master_path: ./temp_captures/master_imx519.jpg
+  secondary_path: ./temp_captures/secondary_imx500.jpg
