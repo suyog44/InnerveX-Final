@@ -1,0 +1,33 @@
+app:
+  title: 'SPECTRA : Hyperspectral Surveillance'
+  header_text: 'SPECTRA : HYPERSPECTRAL SURVEILLANCE'
+  geometry: 1200x800
+  update_ms: 20
+video:
+  target_width: 640
+  target_height: 640
+cameras:
+  master:
+    sensor: imx519
+    index: 0
+  secondary:
+    sensor: imx500
+    index: 1
+alignment:
+  stereo_homography_yaml: /home/pi/InnerveX-Final/data/stereo_alignment_matrix.yaml
+  thermal_align_json: /home/pi/InnerveX-Final/data/mlx_manual_align.json
+yolo:
+  weights: yolov8n.pt
+  conf_threshold: 0.25
+threat:
+  score_threshold: 0.65
+  camouflage_thermal_delta_c: 1.5
+heatmap:
+  grid_w: 40
+  grid_h: 40
+  decay: 0.9
+  sigma: 2.2
+  render_every_n_frames: 2
+logging:
+  csv_path: /home/pi/InnerveX-Final/data/detections.csv
+  log_threat_threshold: 0.3
